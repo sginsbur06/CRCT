@@ -1,0 +1,3 @@
+[submodule "CRCT-front"]
+	path = CRCT-front
+	url = https://github.com/sginsbur06/CRCT-front

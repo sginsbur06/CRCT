@@ -13,20 +13,11 @@ async function main() {
 
     console.log("Deploying with", await deployer.getAddress())
 
-    const DutchAuction = await ethers.getContractFactory("DutchAuction", deployer);
-    const auction = await DutchAuction.deploy(
-        ethers.utils.parseEther('2.0'),
-        1,
-        "Motorbike"
-    );
-    await auction.deployed();
-
     const CRCTShop = await ethers.getContractFactory("CRCTShop", deployer);
     const shop = await CRCTShop.deploy();
     await shop.deployed();
 
     saveFrontendFiles({
-        DutchAuction: auction,
         CRCTShop: shop
     })
 }
